@@ -31,9 +31,9 @@ if (isDeveloping) {
   app.use(webpackHotMiddleware(compiler));
 }
 
-app.get('*', function response(req, res) {
-  res.sendFile(path.join(__dirname, 'dist/index.html'));
-});
+//app.get('*', function response(req, res) {
+//  res.sendFile(path.join(__dirname, 'dist/index.html'));
+//});
 
 app.listen(port, 'localhost', function onStart(err) {
   if (err) {

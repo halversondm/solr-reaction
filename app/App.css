@@ -1,10 +1,31 @@
-.app {
-  background-color: green;
-  height: 50px;
-  border: 1px solid blue;
+body {
+    padding-top: 60px;
 }
 
-.bap {
-  background-color: red;
-  height: 25px;
+#search-form {
+    margin: 0px;
+}
+
+#result-summary {
+    margin-bottom: 20px;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+/*force scrollbar*/
+.facet, .chosen-facet {
+    margin-bottom: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.nav-title {
+    text-transform: uppercase;
+    font-weight: bold
+}
+
+.entry {
+    margin-bottom: 10px;
 }
