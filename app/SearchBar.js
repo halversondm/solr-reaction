@@ -7,7 +7,7 @@ import React from 'react';
 import $ from 'jquery';
 
 
-class SolrReactionNav extends React.Component {
+class SearchBar extends React.Component {
 
     constructor() {
         super();
@@ -16,7 +16,7 @@ class SolrReactionNav extends React.Component {
 
     keyUp(e) {
         var query = this.refs.searchQuery.value.trim();
-        console.info("from search box " + query);
+        //console.info("from search box " + query);
         this.props.onQuery({query: query});
     }
 
@@ -38,4 +38,4 @@ class SolrReactionNav extends React.Component {
 
 }
 
-export default SolrReactionNav;
+export default SearchBar;
