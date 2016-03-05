@@ -2,10 +2,7 @@
  * Created by Daniel on 11/12/2015.
  */
 'use strict';
-import styles from 'bootstrap.css';
 import React from 'react';
-import $ from 'jquery';
-
 
 class SearchBar extends React.Component {
 
@@ -15,9 +12,9 @@ class SearchBar extends React.Component {
     }
 
     keyUp(e) {
-        var query = this.refs.searchQuery.value.trim();
-        //console.info("from search box " + query);
-        this.props.onQuery({query: query});
+        var query = e.target.value.trim();
+        console.info("from search box " + query);
+        //this.props.onQuery({ query: query });
     }
 
     render() {
@@ -28,7 +25,7 @@ class SearchBar extends React.Component {
                     <form className="navbar-form navbar-left">
                         <div id="form-group">
                             <input type="text" className="form-control" placeholder="Search ..."
-                                   onKeyUp={this.keyUp} ref="searchQuery"/>
+                                   onKeyUp={this.keyUp}/>
                         </div>
                     </form>
                 </div>
