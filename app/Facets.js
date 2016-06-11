@@ -6,23 +6,26 @@ import React from 'react';
 import FacetField from './FacetField.js';
 
 class Facets extends React.Component {
-    constructor() {
-        super();
-    }
+  constructor() {
+    super();
+  }
 
-    render() {
-        var facetFieldNodes = this.props.data.map(function (facet, index) {
-            return (
-                <FacetField key={index} facetField={facet.key} facetResults={facet.value}/>
-            )
-        });
-
-        return (
-            <div>
-                {facetFieldNodes}
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div>
+        {this.props.data.map((facet, index) => {
+          return (
+            <FacetField key={index} facetField={facet.key}
+                        facetResults={facet.value}/>
+          );
+        }).bind(this)}
+      </div>
+    );
+  }
 }
 
 export default Facets;
+
+Facets.propTypes = {
+  data: React.propTypes.array
+};

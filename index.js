@@ -1,4 +1,7 @@
 'use strict';
+
 module.exports = {
-    SearchBar: require('babel!./app/SearchBar')
-};
+    SearchBar2: require('./app/SearchBar2'),
+    SearchBar: require('./app/SearchBar')
+}
+

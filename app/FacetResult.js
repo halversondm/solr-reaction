@@ -5,15 +5,19 @@
 import React from 'react';
 
 class FacetResult extends React.Component {
-    constructor() {
-        super();
-    }
+  constructor() {
+    super();
+  }
 
-    render() {
-        return (
-            <div>{this.props.result}</div>
-        );
-    }
+  render() {
+    return (
+      <div>{this.props.result}</div>
+    );
+  }
 }
 
 export default FacetResult;
+
+FacetResult.propTypes = {
+  result: React.PropTypes.string
+};
